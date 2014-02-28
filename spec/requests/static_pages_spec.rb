@@ -38,4 +38,57 @@ describe "Static pages" do
         end
     end
 
+    describe "Contact page" do
+        it "should have the content 'Contact Us'" do
+            visit '/static_pages/contact'
+            expect(page).to have_content('Contact Us')
+        end
+
+        it "should have the title 'Contact Us'" do
+            visit '/static_pages/contact'
+            expect(page).to have_title('CS 232 Rails Development | Contact Us')
+        end
+
+        it "should contain the words 'CS 232 Contact" do
+            visit '/static_pages/contact'
+            expect(page).to have_content('CS 232 Contact')
+        end
+
+        it "should contain an <h1 class='page-title'> element" do
+            visit '/static_pages/contact'
+            expect(page).to have_selector('h1.page-title')
+        end
+
+        it "should contain a Definition List with a <dl>" do
+            visit '/static_pages/contact'
+            expect(page).to have_selector('dl')
+        end
+
+        it "should contain an HTML element <dt> element" do
+            visit '/static_pages/contact'
+            expect(page).to have_selector('dt')
+        end
+
+        it "should contain an HTML element <dd> element" do
+            visit '/static_pages/contact'
+            expect(page).to have_selector('dd')
+        end
+
+        it "should contain an HTML element named <section class='main'>" do
+            visit '/static_pages/contact'
+            expect(page).to have_selector('section.main')
+        end
+
+        it "should contain an `h1.page-title` selector in css" do
+            visit '/static_pages/contact'
+            expect(page).to have_css('h1.page-title')
+        end
+
+        it "should contain a `.main selector` in css" do
+            visit '/static_pages/contact'
+            expect(page).to have_css('.main')
+        end
+
+    end
+
 end
