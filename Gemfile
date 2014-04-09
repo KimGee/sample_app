@@ -16,6 +16,8 @@ end
 
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.4.0'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.1.0'
 gem 'turbolinks', '2.2.1'
